@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -21,17 +21,10 @@
 
   <body>
     <div class="page-wrapper">
-
       <header class="site-header">
-        <img
-          src="img/loreal-logo.png"
-          alt="L'Oréal Logo"
-          class="logo"
-        />
+        <img src="img/loreal-logo.png" alt="L'Oréal Logo" class="logo" />
 
-        <h1 class="site-title">
-          Smart Routine & Product Advisor
-        </h1>
+        <h1 class="site-title">Smart Routine & Product Advisor</h1>
 
         <p class="subtitle">
           Choose your products and let AI help build your routine.
@@ -39,74 +32,56 @@
       </header>
 
       <div class="search-section">
-        <select id="categoryFilter">
-          <option value="" disabled selected>
-            Choose a Category
-          </option>
+        <input
+          type="text"
+          id="productSearch"
+          placeholder="Search products..."
+        />
 
+        <select id="categoryFilter">
+          <option value="">All Categories</option>
           <option value="cleanser">Cleansers</option>
-          <option value="moisturizer">
-            Moisturizers & Treatments
-          </option>
+          <option value="moisturizer">Moisturizers & Treatments</option>
           <option value="haircare">Haircare</option>
           <option value="makeup">Makeup</option>
           <option value="hair color">Hair Color</option>
           <option value="hair styling">Hair Styling</option>
-          <option value="men's grooming">
-            Men's Grooming
-          </option>
+          <option value="men's grooming">Men's Grooming</option>
           <option value="suncare">Suncare</option>
           <option value="fragrance">Fragrance</option>
         </select>
+
+        <button id="rtlToggle" class="rtl-btn">RTL</button>
       </div>
 
-      <div
-        id="productsContainer"
-        class="products-grid"
-      ></div>
+      <div id="productsContainer" class="products-grid"></div>
 
       <section class="selected-products">
-
         <div class="selected-header">
           <h2>Selected Products</h2>
 
-          <button id="clearProducts" class="clear-btn">
-            Clear All
-          </button>
+          <button id="clearProducts" class="clear-btn">Clear All</button>
         </div>
 
         <div id="selectedProductsList"></div>
 
-        <button
-          id="generateRoutine"
-          class="generate-btn"
-        >
+        <button id="generateRoutine" class="generate-btn">
           <i class="fa-solid fa-wand-magic-sparkles"></i>
           Generate Routine
         </button>
-
       </section>
 
       <section class="chatbox">
         <h2>Let's Build Your Routine</h2>
 
-        <div
-          id="chatWindow"
-          class="chat-window"
-        >
+        <div id="chatWindow" class="chat-window">
           <div class="placeholder-message">
             Select some products and generate your routine.
           </div>
         </div>
 
         <form id="chatForm" class="chat-form">
-
-          <label
-            for="userInput"
-            class="visually-hidden"
-          >
-            Message
-          </label>
+          <label for="userInput" class="visually-hidden"> Message </label>
 
           <input
             id="userInput"
@@ -119,20 +94,14 @@
           <button type="submit" id="sendBtn">
             <i class="fa-solid fa-paper-plane"></i>
 
-            <span class="visually-hidden">
-              Send
-            </span>
+            <span class="visually-hidden"> Send </span>
           </button>
-
         </form>
       </section>
 
       <footer class="site-footer">
-        <p>
-          L'Oréal Smart Routine Advisor
-        </p>
+        <p>L'Oréal Smart Routine Advisor</p>
       </footer>
-
     </div>
 
     <script src="script.js"></script>
